@@ -319,13 +319,6 @@
               <td>Only masked</td>
               <td>Only modify the pixel that have been masked</td>
             </tr>
-            <tr>
-              <td>Batch size</td>
-              <td>1</td>
-              <td>
-                Number of images to generate per batch, increases memory usage
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -408,8 +401,16 @@
               <td>Batch count</td>
               <td>5</td>
               <td>
-                How many batches to generate. Change this rather than batch size
-                to decrease memory usage
+                How many batches to generate. Slower than batch size but
+                decreased memory usage
+              </td>
+            </tr>
+            <tr>
+              <td>Batch size</td>
+              <td>1</td>
+              <td>
+                Number of images to generate per batch. Increases memory usage
+                but is faster than batch count
               </td>
             </tr>
             <tr>
@@ -540,13 +541,50 @@
           </tbody>
         </table>
       </div>
-      <h2>Conclusion</h2>
+      <h3>Optimization</h3>
       <p>
-        While using settings that other people recommend can get you good
-        results the best way to get results that you like is to research and
-        experiment for yourself.
+        There are multiples ways to improve the speed of Stable Diffusion but
+        the easiest way is using commandline arguments
       </p>
+      <p>
+        If you right click on <code>webui-user.bat</code> and select
+        <code>edit</code> you will see a line that says
+        <code>set COMMANDLINE&UnderBar;ARGS&equals;</code>
+      </p>
+      <p>
+        At the end of this line after the <code>&equals;</code> type in these
+        arguments with a space between each one
+      </p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Argument</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>--xformers</code></td>
+              <td>
+                xFormers is a library that greatly improves memory consumption
+                and speed
+              </td>
+            </tr>
+            <tr>
+              <td><code>--opt-split-attention</code></td>
+              <td>Significantly reduces memory usage at almost no cost</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+    <h2>Conclusion</h2>
+    <p>
+      While using settings that other people recommend can get you good results
+      the best way to get results that you like is to research and experiment
+      for yourself.
+    </p>
     <footer>
       <address id="contact-info">
         Made by Average Degen<br />

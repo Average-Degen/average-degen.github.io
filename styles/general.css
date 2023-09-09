@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  color: white;
+  background-color: rgb(11, 15, 25);
+  font-family: "Source Sans Pro", "ui-sans-serif", "system-ui", sans-serif;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 45px;
+  border-bottom: solid;
+  border-color: rgb(249, 115, 22);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+a:link {
+  color: rgb(230, 106, 18);
+}
+a:hover {
+  color: rgb(255, 122, 28);
+}
+a:active {
+  color: rgb(153, 69, 8);
+}
+a:visited {
+  color: rgb(245, 128, 45);
+}
+
+#contact-info {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  border-top: solid;
+}

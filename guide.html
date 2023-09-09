@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nudify Guide</title>
+    <link rel="icon" href="images/icon.png" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/guide.css" />
+  </head>
+  <body>
+    <h1>
+      Nudify With
+      <span style="font-style: italic; font-size: 52px;">Stable Diffusion</span>
+    </h1>
+
+    <div class="info-container">
+      <h2>Recommended Specs</h2>
+      <p>
+        Running Stable Diffusion without meeting these recommended
+        specifications may result in crashes or an inability to install Stable
+        Diffusion
+      </p>
+      <p>
+        I recommend not continuing with this guide unless your computer meets
+        these requirements &colon;
+      </p>
+      <ul>
+        <li>
+          <a href="https://developer.nvidia.com/cuda-gpus">CUDA-capable GPU</a>
+        </li>
+        <li>16GB of RAM</li>
+        <li>30GB free storage</li>
+        <li>4GB of VRAM</li>
+      </ul>
+    </div>
+    <div class="info-container">
+      <h2>Installation Guide</h2>
+      <p>
+        The most commonly used UI for Stable Diffusion is made by
+        <a
+          href="https://github.com/AUTOMATIC1111/stable-diffusion-webui"
+          target="_blank"
+          >AUTOMATIC1111
+        </a>
+        . It is what will be used in this guide
+      </p>
+      <h3>Step 1: Install Python</h3>
+      <p>
+        AUTOMATIC1111's Stable Diffusion Web UI requires python version 3.10.6
+        to be installed
+      </p>
+      <p>
+        If you already have a different version of python installed and don't
+        want to break other programs you can use
+        <a
+          href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html"
+          target="_blank"
+          >Conda
+        </a>
+        <br />Just ensure that you are always working inside the Conda
+        environment that you create
+      </p>
+      <p>
+        To install python 3.10.6 you need to download and run the
+        <a
+          href="https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe"
+          target="_blank"
+          >64-bit Windows Installer</a
+        >
+        found on the
+        <a
+          href="https://www.python.org/downloads/release/python-3106/"
+          target="_blank"
+          >Python website</a
+        >
+      </p>
+      <p>
+        When using the installer ensure that you select
+        <code>Add Python 3.10 to PATH</code>
+        <br />(This allows you to access python via command prompt)
+      </p>
+      <h3>Step 2: Install Git</h3>
+      <p>
+        <a href="https://git-scm.com/" target="_blank">Git</a> is a distributed
+        version control system that allows you to clone the GitHub repository
+        for Stable Diffusion
+      </p>
+      <p>
+        To install Git go to
+        <a href="https://git-scm.com/download/win">this page</a> and download
+        the 64-bit Windows Setup
+      </p>
+      <p>Then just follow the instructions to install Git</p>
+      <h3>Step 3: Clone Repository</h3>
+      <p>To download Stable Diffusion you need to clone the repository</p>
+      <p>
+        To launch command prompt press the key combination
+        <code>Windows + R</code> and type <code>cmd</code> then press
+        <code>OK</code>
+      </p>
+      <p>
+        Now to clone the repository type in or paste this command and press
+        enter
+      </p>
+      <code style="margin-left: 30px;"
+        >git clone
+        https://github.com/AUTOMATIC1111/stable-diffusion-webui.git</code
+      >
+      <p>
+        Now a folder called <code>stable-diffusion-webui</code> should be
+        located inside your user directory
+      </p>
+      <h3>Step 4: Launch WebUI</h3>
+      <p>
+        To find the newly created <code>stable-diffusion-webui</code> folder
+        enter this into the address bar at the top of file explorer
+      </p>
+      <code style="margin-left: 30px;"
+        >%userprofile%\stable-diffusion-webui
+      </code>
+      <p>
+        Inside this folder then should be a file named
+        <code>webui-user.bat</code>
+      </p>
+      <p>
+        To launch Stable Diffusion you need to simply run this file and the rest
+        of the installation will be done for you
+      </p>
+      <p>
+        Once it has downloaded the required files it will start the web UI on
+        local URL: <code>127.0.0.1:7860</code>
+      </p>
+    </div>
+    <div class="info-container">
+      <h2>Nudifying</h2>
+      <h3>Basics</h3>
+      <p>
+        The basic process of nudifying involves painting a mask over the clothes
+        that you want to remove and generating images until you get a good
+        result
+      </p>
+      <h3>Inpainting Models</h3>
+      <p>
+        To create a good nudify you need a model that is designed specifically
+        for inpainting
+      </p>
+      <p>
+        A large collection of models can be found at
+        <a href="https://civitai.com/models">Civitai</a>, a great place to find
+        nsfw Stable Diffusion models and LoRAs <br />When looking for models
+        ensure that you filter out everything except
+        <code>checkpoint</code> models
+      </p>
+      <p>
+        These are the models that I recommend based on personal usage and
+        preference
+      </p>
+      <ul>
+        <li>
+          <a
+            href="https://civitai.com/models/2661?modelVersionId=15670"
+            target="_blank"
+            >Uber Realistic Porn Merge</a
+          >
+        </li>
+        <li>
+          <a href="https://civitai.com/models/10961" target="_blank"
+            >LazyMix&plus;</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://civitai.com/models/4201?modelVersionId=130090"
+            target="_blank"
+            >Realistic Vision</a
+          >
+        </li>
+      </ul>
+      <p>
+        When downloading a new model it is important that you select the
+        inpainting version of the model
+        <br />If there is no inpainting model you can convert it to one using
+        <a
+          href="https://www.reddit.com/r/StableDiffusion/comments/zyi24j/how_to_turn_any_model_into_an_inpainting_model/"
+          target="_blank"
+          >this guide from Reddit</a
+        >
+      </p>
+      <h3>LoRAs</h3>
+      <p>
+        LoRAs are like small models that can help specify in more detail what
+        you want the generated image to look like <br />
+        An example of a LoRA is
+        <a
+          href="https://civitai.com/models/7145?modelVersionId=8401"
+          target="_blank"
+          >Uber Realistic Booty and Vag</a
+        >
+        which helps create better looking lower bodies
+      </p>
+      <p>
+        To use a LoRA you need to click the LoRA tab and choose a LoRA that you
+        want to use, it will then be added to the prompt.
+      </p>
+      <p>
+        Before generating an image you need to check it's Civitai page for if it
+        has a trigger word or set of trigger words, meaning you need to include
+        at least one of those words in your prompt to trigger the LoRA
+      </p>
+      <p>
+        When the LoRA is in your prompt it will be formatted like this:
+        <code>&lt;lora&colon;loraname&colon;weight&gt;</code> <br />The weight
+        is a number that specifies how much the LoRA will impact the final
+        product&semi; greater value &equals; greater impact
+      </p>
+      <p>
+        I encourage you to visit Civitai and search for yourself to find LoRAs
+        that you want to use
+      </p>
+      <h3>Prompts</h3>
+      <p>
+        Prompts are not as important as you may think when nudifying, most of
+        the heavy lifting is done by the model <br />But more specific prompts
+        can help with poses and proportions that the model doesn't understand
+      </p>
+      <p>
+        These basic prompts and negatives will be fine for most situations
+        <br />Positive: <code>woman, nude</code> <br />Negative:
+        <code
+          >hand, finger, sfw, jeans, denim, clothes, dress, skirt, clothing,
+          underwear, bra, bikini, panties, dress, 3d, 3d render, blurry, canvas
+          frame, cartoon, deformed, disfigured, gross, mutant, ugly, jewelry,
+          piercing
+        </code>
+      </p>
+      <p>
+        When looking for a specific result you may need to change the weight of
+        a prompt <br />You can do this by highlighting the prompt you want to
+        change the weight of and pressing <code>ctrl + up/down arrow</code> to
+        decrease or increase weight
+      </p>
+      <h3>Settings</h3>
+      <p>The settings that you use are very important when nudifying</p>
+      <p>
+        The following settings you will likely never need to change from these
+        values
+      </p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Setting</th>
+              <th>Value</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Resize mode</td>
+              <td>Resize and fill</td>
+              <td>So the output image is same resolution as input</td>
+            </tr>
+            <tr>
+              <td>Mask mode</td>
+              <td>Inpaint masked</td>
+              <td>
+                The area that you inpaint is what is modifed rather than kept
+                the same
+              </td>
+            </tr>
+            <tr>
+              <td>Inpaint area</td>
+              <td>Only masked</td>
+              <td>Only modify the pixel that have been masked</td>
+            </tr>
+            <tr>
+              <td>Batch size</td>
+              <td>1</td>
+              <td>
+                Number of images to generate per batch, increases memory usage
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        These next settings are more up to you and can have a positive impact on
+        your results
+        <br />&lpar;Noise is referenced in these settings because Stable
+        Diffusion worked by generating random noise and procedurally removing
+        it&rpar;
+      </p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Setting</th>
+              <th>Value</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mask blur</td>
+              <td>3</td>
+              <td>
+                Changes how much the edge of the mask is blurred before
+                generating the image
+              </td>
+            </tr>
+            <tr>
+              <td>Masked content</td>
+              <td>fill</td>
+              <td>
+                Image generated off extremely blurred version of masked area
+                &lpar;<a
+                  href="https://onceuponanalgorithm.org/guide-stable-diffusion-inpaint-masked-content-options-explained/"
+                  target="_blank"
+                  >more info</a
+                >&rpar;
+              </td>
+            </tr>
+            <tr>
+              <td>Only masked padding, pixels</td>
+              <td>50-150</td>
+              <td>
+                How many pixels to the side of the mask to use as reference for
+                better nudify continuity with rest of image
+              </td>
+            </tr>
+            <tr>
+              <td>Sampling method</td>
+              <td>DPM++ 2M Karras</td>
+              <td>
+                Algorithm used to remove noise during generation &lpar;<a
+                  href="https://stable-diffusion-art.com/samplers/"
+                  target="_blank"
+                  >more info</a
+                >&rpar;
+              </td>
+            </tr>
+            <tr>
+              <td>Sampling steps</td>
+              <td>30</td>
+              <td>
+                Number of iterations when removing noise from image &lpar;<a
+                  href="https://onceuponanalgorithm.org/guide-what-are-sampling-steps-and-how-to-reduce-them-in-stable-diffusion/"
+                  target="_blank"
+                  >more info</a
+                >&rpar;
+              </td>
+            </tr>
+            <tr>
+              <td>Width &amp; Height</td>
+              <td>512 &amp; 512</td>
+              <td>
+                Resolution of output image, anything other than 512 greatly
+                increases time to generate images
+              </td>
+            </tr>
+            <tr>
+              <td>Batch count</td>
+              <td>5</td>
+              <td>
+                How many batches to generate. Change this rather than batch size
+                to decrease memory usage
+              </td>
+            </tr>
+            <tr>
+              <td>CGF scale</td>
+              <td>7</td>
+              <td>
+                How closely to follow the prompts &lpar;<a
+                  href="https://onceuponanalgorithm.org/guide-stable-diffusions-cfg-scale-explained/"
+                  target="_blank"
+                  >more info</a
+                >&rpar;
+              </td>
+            </tr>
+            <tr>
+              <td>Denoise strength</td>
+              <td>1</td>
+              <td>
+                How much noise to add to image. Lower values look more similar
+                to original &lpar;<a
+                  href="https://onceuponanalgorithm.org/guide-what-denoising-strength-does-and-how-to-use-it-in-stable-diffusion/"
+                  target="_blank"
+                  >more info</a
+                >&rpar;
+              </td>
+            </tr>
+            <tr>
+              <td>Seed</td>
+              <td>&minus;1</td>
+              <td>
+                &minus;1 is a random seed. Using the same seed multiple times
+                result in the same output
+                <br />&lpar;Batch count increments seed by &plus;1&rpar;
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Inpainting</h3>
+      <p>
+        Inpainting is when you paint a mask over what you want to change in an
+        image
+      </p>
+      <p>
+        When inpainting it is generally a good idea to inpaint more than you
+        think you need so that you don&apos;t have fragments of clothes
+        remaining
+      </p>
+      <p>Heres some examples of good inpainting</p>
+      <div>
+        <img class="inpaint-example" src="images/inpaint-example-1.png" />
+        <img class="inpaint-example" src="images/inpaint-example-2.png" />
+      </div>
+    </div>
+    <div class="info-container">
+      <h2>Additional Info</h2>
+      <h3>ControlNet</h3>
+      <p>
+        ControlNet is a very useful tool for perfecting difficult poses or low
+        quality images
+      </p>
+      <p>
+        To install ControlNet you need to switch to the
+        <code>Extensions</code> tab and select the <code>Available</code> tab
+        <br />
+        Once you are on this page click <code>Load from:</code> <br />You can
+        then order the results by stars and search for
+        <code>sd&dash;webui&dash;controlnet</code> and press
+        <code>Install</code> <br />
+        You can then restart the UI and ControlNet will be installed
+      </p>
+      <p>
+        Before you can utilise ControlNet you need to download ControlNet
+        specific models <br />These can be found on
+        <a
+          href="https://huggingface.co/lllyasviel/ControlNet/tree/main/models"
+          target="_blank"
+          >Hugging Face
+        </a>
+        &comma; a good resource for all things AI
+        <br />For nudifying I recommend using either the openpose or depth
+        models
+      </p>
+      <p>
+        Now that you have everything you need you can find the ControlNet
+        dropdown at the bottom of the inpaint page
+      </p>
+      <p>These are the settings I recommend changing</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Setting</th>
+              <th>Value</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Enable</td>
+              <td>yes</td>
+              <td>This allows ControlNet to influence the output result</td>
+            </tr>
+            <tr>
+              <td>Preprocessor</td>
+              <td>depends on model</td>
+              <td>
+                If using depth model use depth&UnderBar;midas as this handles
+                humans the best. <br />
+                If using openpose use any of the preprocessors with openpose in
+                their name, I encourage you to experiment with these
+              </td>
+            </tr>
+            <tr>
+              <td>Model</td>
+              <td>Your choice</td>
+              <td>Choose the model that you want to use to get a result</td>
+            </tr>
+            <tr>
+              <td>Control weight</td>
+              <td>0.5 &dash; 0.9</td>
+              <td>Determines how much impact ControlNet has on the output</td>
+            </tr>
+            <tr>
+              <td>Control mode</td>
+              <td>Balanced</td>
+              <td>How important ControlNet is compared to prompt</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Conclusion</h2>
+      <p>
+        While using settings that other people recommend can get you good
+        results the best way to get results that you like is to research and
+        experiment for yourself.
+      </p>
+    </div>
+    <footer>
+      <address id="contact-info">
+        Made by Average Degen<br />
+        Contact me at Average.Degen@outlook.com<br />
+        My <a href="https://github.com/Average-Degen" target="_blank">GitHub</a>
+      </address>
+    </footer>
+  </body>
+</html>

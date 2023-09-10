@@ -1,31 +1,30 @@
-#intro-content {
+#options-flex {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.index-img {
-  width: 300px;
-  margin: 30px;
-}
-
-.info {
-  color: rgb(156, 163, 175);
-  text-align: center;
-  padding-bottom: 25px;
-  padding-right: 40px;
-  padding-left: 40px;
-}
-
-#button-container {
+.option-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.option-img {
+  display: block;
+  width: 70%;
+  border-radius: 5px;
+  margin-top: 50px;
 }
 
 #load-button {
+  display: block;
   cursor: pointer;
   background-color: rgb(233, 107, 18);
   color: white;

@@ -15,6 +15,81 @@ h1 {
   padding-bottom: 15px;
 }
 
+h2 {
+  font-size: 45px;
+  padding-left: 15px;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+h4 {
+  font-size: 25px;
+  color: rgb(156, 163, 175);
+  padding-left: 30px;
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 18px;
+  padding-left: 30px;
+  color: rgb(156, 163, 175);
+}
+
+li {
+  margin-left: 30px;
+  color: rgb(156, 163, 175);
+}
+
+code {
+  background-color: rgb(249, 115, 22);
+  color: black;
+  padding: 3px;
+  font-size: 15px;
+}
+
+.table-container {
+  display: block;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  overflow-x: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: rgb(249, 115, 22);
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  text-indent: 0px;
+  text-align: center;
+}
+
+td {
+  background-color: rgb(11, 15, 25);
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  text-indent: 0px;
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(18, 24, 39);
+}
+
 a:link {
   color: rgb(230, 106, 18);
 }
@@ -33,4 +108,5 @@ a:visited {
   padding-bottom: 15px;
   text-align: center;
   border-top: solid;
+  border-color: rgb(249, 115, 22);
 }

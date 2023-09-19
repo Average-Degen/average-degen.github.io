@@ -154,8 +154,20 @@
       </p>
       <p>
         If you want to upload any videos you do to 4chan you can also change the
-        <code>Video Output Format</code> to webm and decrease the
+        <code>Video Output Format</code> to <code>webm</code> and decrease the
         <code>Video Quality &lpar;crf&rpar;</code> to decrease file size
+      </p>
+      <p>
+        To upload to 4chan you must also strip the audio from the file
+        <br />You may be able to do this by selecting
+        <code>Skip audio</code> before generating the deepfake <br />But if that
+        doesn't work you can use
+        <a href="https://ffmpeg.org/download.html">FFmpeg</a> to strip the audio
+        with this command: <br /><code
+          >ffmpeg -i input_file.webm -vcodec copy -an output_name.webm</code
+        >
+        <br />Just make sure to replace <code>input_file.webm</code> with the
+        name of the file you want to process
       </p>
       <p>
         Make sure you press <code>Apply Settings</code> after changing any of

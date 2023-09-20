@@ -46,6 +46,7 @@ li {
 
 code {
   background-color: rgb(249, 115, 22);
+  border-radius: 2px;
   color: black;
   padding: 3px;
   font-size: 15px;

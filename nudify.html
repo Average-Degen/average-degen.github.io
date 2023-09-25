@@ -18,7 +18,7 @@
         This guide aims to teach you the basics of nudifying images using Stable
         Diffusion
       </p>
-      <h2>Recommended Specs</h2>
+      <h2 id="specs">Recommended Specs</h2>
       <p>
         Running Stable Diffusion without meeting these recommended
         specifications may result in crashes or an inability to install Stable
@@ -38,7 +38,7 @@
       </ul>
     </div>
     <div class="info-container">
-      <h2>Installation Guide</h2>
+      <h2 id="installation">Installation Guide</h2>
       <p>
         This installation guide will only cover the Windows installation of
         Stable Diffusion &lpar;Linux is quite similar&rpar;<br />Pleb Mac users
@@ -146,8 +146,8 @@
       </p>
     </div>
     <div class="info-container">
-      <h2>Nudifying</h2>
-      <h3>Basics</h3>
+      <h2 id="nudifying">Nudifying</h2>
+      <h3 id="basics">Basics</h3>
       <p>
         The basic process of nudifying involves painting a mask over the clothes
         that you want to remove and generating images until you get a good
@@ -157,7 +157,7 @@
         You will need to be in the <code>inpaint</code> section of the
         <code>img2img</code> tag to be able to nudify an image
       </p>
-      <h3>Inpainting Models</h3>
+      <h3 id="models">Inpainting Models</h3>
       <p>
         To create a good nudify you need a model that is designed specifically
         for inpainting
@@ -217,7 +217,7 @@
         <br />All checkpoint models go inside the
         <code>stable-diffusion-webui/models/Stable-Diffusion</code> folder
       </p>
-      <h3>LoRAs</h3>
+      <h3 id="loras">LoRAs</h3>
       <p>
         LoRAs are like small models that can help specify in more detail what
         you want the generated image to look like <br />
@@ -252,7 +252,7 @@
         I encourage you to visit Civitai and search for yourself to find LoRAs
         that you want to use
       </p>
-      <h3>LyCORIS</h3>
+      <h3 id="lycoris">LyCORIS</h3>
       <p>
         LyCORIS models are similar to LoRA models in that they both modify the
         result to achieve a specific result
@@ -265,7 +265,7 @@
         The difference between LyCORIS and LoRA models is that LyCORIS models
         are more powerful and are often a smaller file size
       </p>
-      <h3>Embeddings</h3>
+      <h3 id="embeddings">Embeddings</h3>
       <p>
         Embeddings &lpar;also known as textual inversions&rpar; allow you to
         better recreate a specific set of features that the embedding has been
@@ -285,7 +285,7 @@
         Like LoRAs embeddings have trigger words which must be included in your
         prompt to trigger the textual inversion
       </p>
-      <h3>Prompts</h3>
+      <h3 id="prompts">Prompts</h3>
       <p>
         Prompts are not as important as you may think when nudifying, most of
         the heavy lifting is done by the model <br />But more specific prompts
@@ -307,7 +307,7 @@
         change the weight of and pressing <code>ctrl + up/down arrow</code> to
         decrease or increase weight
       </p>
-      <h3>Settings</h3>
+      <h3 id="settings">Settings</h3>
       <p>The settings that you use are very important when nudifying</p>
       <p>
         The following settings you will likely never need to change from these
@@ -470,7 +470,7 @@
           </tbody>
         </table>
       </div>
-      <h3>Inpainting</h3>
+      <h3 id="inpainting">Inpainting</h3>
       <p>
         Inpainting is when you paint a mask over what you want to change in an
         image
@@ -493,8 +493,8 @@
       </div>
     </div>
     <div class="info-container">
-      <h2>Additional Info</h2>
-      <h3>ControlNet</h3>
+      <h2 id="extra-info">Additional Info</h2>
+      <h3 id="controlnet">ControlNet</h3>
       <p>
         ControlNet is a very useful tool for perfecting difficult poses or low
         quality images
@@ -569,7 +569,7 @@
           </tbody>
         </table>
       </div>
-      <h3>Optimization</h3>
+      <h3 id="optimisation">Optimization</h3>
       <p>
         There are multiple ways to improve the speed of Stable Diffusion but the
         easiest way is using commandline arguments
@@ -608,7 +608,7 @@
       </div>
     </div>
     <div class="info-container">
-      <h2>Conclusion</h2>
+      <h2 id="conclusion">Conclusion</h2>
       <p>
         While using settings that other people recommend can get you good
         results the best way to get results that you like is to research and

@@ -24,6 +24,7 @@
         specifications may result in crashes or an inability to install Stable
         Diffusion
       </p>
+      f
       <p>
         I recommend not continuing with this guide unless your computer meets
         these requirements &colon;
@@ -569,7 +570,23 @@
           </tbody>
         </table>
       </div>
-      <h3 id="optimisation">Optimization</h3>
+      <h3 id="outpainting">Outpainting</h3>
+      <p>
+        Outpainting is the process of extending an image with Stable Diffusion
+      </p>
+      <p>
+        To outpaint you must change to the img2img tab and upload the image that
+        you want to outpaint
+      </p>
+      <p>
+        You can then scroll down to the bottom of the page and select
+        <code>Outpainting mk2</code>
+      </p>
+      <p>
+        You can then select the settings that you want to use &lpar;the
+        important ones are quite self-explanatory&rpar; and click generate
+      </p>
+      <h3 id="optimization">Optimization</h3>
       <p>
         There are multiple ways to improve the speed of Stable Diffusion but the
         easiest way is using commandline arguments
@@ -602,6 +619,75 @@
             <tr>
               <td><code>--opt-split-attention</code></td>
               <td>Significantly reduces memory usage at almost no cost</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 id="limitations">Limitations</h3>
+      <p>
+        There are a few limitations when nudifying that can make it difficult to
+        generate good results
+      </p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Limitation</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bad pose</td>
+              <td>
+                Generally the easiest pose is a fontal standing shot. More
+                difficult poses may require extra prompting or controlnet
+                openpose assistance
+              </td>
+            </tr>
+            <tr>
+              <td>Subject too far from camera</td>
+              <td>
+                This may require you to crop or upscale the image to get a good
+                result
+              </td>
+            </tr>
+            <tr>
+              <td>Not showing much body</td>
+              <td>
+                If the subject isn't show enough to produce a good result you
+                may need to outpaint
+              </td>
+            </tr>
+            <tr>
+              <td>Dark clothes</td>
+              <td>
+                Dark clothes in bad lighting causes an extreme lack of depth
+                perception in the image making it difficult to predict the
+                proportions of the subject
+              </td>
+            </tr>
+            <tr>
+              <td>Objects partially covering breast</td>
+              <td>
+                When something is covering the subject's breasts the result fine
+                tuning is often a smaller breast squished to the side of the
+                object
+              </td>
+            </tr>
+            <tr>
+              <td>Part of body covered or cropped</td>
+              <td>
+                Most models tend to be confused by half cropped subjects and
+                generate compressed figures or bad proportions
+              </td>
+            </tr>
+            <tr>
+              <td>Low quality image</td>
+              <td>
+                A low quality image is usually not a major issue as long as you
+                can't count the pixels and there isn't too much blur
+              </td>
             </tr>
           </tbody>
         </table>

@@ -12,19 +12,56 @@
         Degenerate AI Guides
       </a>
     </h1>
-
+    <p style="font-size: 25px; text-align: center;">
+      This guide aims to teach you the basics of nudifying images using Stable
+      Diffusion
+    </p>
+    <div id="toc-container" style="margin-top: 10px;">
+      <h2 id="contents">Contents</h2>
+      <ul>
+        <li class="toc-index">
+          <a href="#specs">Recommended Specs</a>
+        </li>
+        <li class="toc-index">
+          <a href="#installation">Installation Guide</a>
+          <ul>
+            <li class="toc-index"><a href="#python">Install Python</a></li>
+            <li class="toc-index"><a href="#git">Install Git</a></li>
+            <li class="toc-index"><a href="#clone">Clone Repo</a></li>
+            <li class="toc-index"><a href="#launch">Launch WebUI</a></li>
+          </ul>
+        </li>
+        <li class="toc-index">
+          <a href="#nudifying">Nudifying</a>
+          <ul>
+            <li class="toc-index"><a href="#basics">Basics</a></li>
+            <li class="toc-index"><a href="#models">Inpainting Models</a></li>
+            <li class="toc-index"><a href="#loras">LoRAs</a></li>
+            <li class="toc-index"><a href="#lycoris">LyCORIS</a></li>
+            <li class="toc-index"><a href="#embeddings">Embeddings</a></li>
+            <li class="toc-index"><a href="#prompts">Prompts</a></li>
+            <li class="toc-index"><a href="#settings">Settings</a></li>
+            <li class="toc-index"><a href="#inpainting">Inpainting</a></li>
+          </ul>
+        </li>
+        <li class="toc-index">
+          <a href="#extra-info">Additional Info</a>
+          <ul>
+            <li class="toc-index"><a href="#controlnet">ControlNet</a></li>
+            <li class="toc-index"><a href="#outpainting">Outpainting</a></li>
+            <li class="toc-index"><a href="#optimization">Optimization</a></li>
+            <li class="toc-index"><a href="#limitations">Limitations</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
     <div class="info-container">
-      <p>
-        This guide aims to teach you the basics of nudifying images using Stable
-        Diffusion
-      </p>
       <h2 id="specs">Recommended Specs</h2>
       <p>
         Running Stable Diffusion without meeting these recommended
         specifications may result in crashes or an inability to install Stable
         Diffusion
       </p>
-      f
       <p>
         I recommend not continuing with this guide unless your computer meets
         these requirements &colon;
@@ -59,7 +96,7 @@
         </a>
         . It is what will be used in this guide
       </p>
-      <h3>Step 1: Install Python</h3>
+      <h3 id="python">Step 1: Install Python</h3>
       <p>
         AUTOMATIC1111's Stable Diffusion Web UI requires python version 3.10.6
         to be installed
@@ -94,7 +131,7 @@
         <code>Add Python 3.10 to PATH</code>
         <br />(This allows you to access python via command prompt)
       </p>
-      <h3>Step 2: Install Git</h3>
+      <h3 id="git">Step 2: Install Git</h3>
       <p>
         <a href="https://git-scm.com/" target="_blank">Git</a> is a distributed
         version control system that allows you to clone the GitHub repository
@@ -106,7 +143,7 @@
         the 64-bit Windows Setup
       </p>
       <p>Then just follow the instructions to install Git</p>
-      <h3>Step 3: Clone Repository</h3>
+      <h3 id="clone">Step 3: Clone Repository</h3>
       <p>To download Stable Diffusion you need to clone the repository</p>
       <p>
         To launch command prompt press the key combination
@@ -125,7 +162,7 @@
         Now a folder called <code>stable-diffusion-webui</code> should be
         located inside your user directory
       </p>
-      <h3>Step 4: Launch WebUI</h3>
+      <h3 id="launch">Step 4: Launch WebUI</h3>
       <p>
         To find the newly created <code>stable-diffusion-webui</code> folder
         enter this into the address bar at the top of file explorer

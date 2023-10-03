@@ -111,3 +111,11 @@ a:visited {
   border-top: solid;
   border-color: rgb(249, 115, 22);
 }
+
+.toc-index {
+  font-size: 18px;
+}
+
+#toc-container {
+  display: inline-block;
+}

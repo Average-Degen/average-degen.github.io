@@ -15,13 +15,15 @@
     <div class="info-container">
       <p>
         This guide will being using a fork of a popular one-click face swap tool
-        called <a href="https://github.com/s0md3v/roop">Roop</a> <br />We will
-        be using a fork called
-        <a href="https://github.com/C0untFloyd/roop-unleashed">Roop Unleashed</a
+        called
+        <a href="https://github.com/s0md3v/roop" target="_blank">Roop</a>
+        <br />We will be using a fork called
+        <a href="https://github.com/C0untFloyd/roop-unleashed" target="_blank"
+          >Roop Unleashed</a
         >. This is because Roop has been discontinued and Roop Unleashed has
         more features
       </p>
-      <div>
+      <div class="info-container">
         <h2>Installation Guide</h2>
         <p>
           The easiest way to install Roop Unleashed is by using the one-click
@@ -30,7 +32,9 @@
         <h3>Step 1&colon; Download Installer</h3>
         <p>
           This installer can be found in the
-          <a href="https://github.com/C0untFloyd/roop-unleashed/releases"
+          <a
+            href="https://github.com/C0untFloyd/roop-unleashed/releases"
+            target="_blank"
             >releases</a
           >
           page of the GitHub repository
@@ -42,8 +46,11 @@
         <p>
           Now to install the program you need to first extract the zip file
           <br />To do this you can either use a program like
-          <a href="https://www.win-rar.com/download.html?&L=0">WinRAR</a> or you
-          can just right click the file and select <code>Extract All</code>
+          <a href="https://www.win-rar.com/download.html?&L=0" target="_blank"
+            >WinRAR</a
+          >
+          or you can just right click the file and select
+          <code>Extract All</code>
         </p>
         <h3>Step 3: Run Roop Unleashed</h3>
         <p>
@@ -67,13 +74,15 @@
         <h4>Side Note</h4>
         <p>
           If you encounter any errors you may need to download and install
-          <a href="https://visualstudio.microsoft.com/de/downloads/"
+          <a
+            href="https://visualstudio.microsoft.com/de/downloads/"
+            target="_blank"
             >Visual Studio</a
           >
           and select the C++ package during installation
         </p>
       </div>
-      <div>
+      <div class="info-container">
         <h2>Deepfaking</h2>
         <h3>Inputs</h3>
         <h4>Choosing Input</h4>
@@ -169,8 +178,8 @@
           <br />You may be able to do this by selecting
           <code>Skip audio</code> before generating the deepfake <br />But if
           that doesn't work you can use
-          <a href="https://ffmpeg.org/download.html">FFmpeg</a> to strip the
-          audio with this command: <br /><code
+          <a href="https://ffmpeg.org/download.html" target="_blank">FFmpeg</a>
+          to strip the audio with this command: <br /><code
             >ffmpeg -i input_file.webm -vcodec copy -an output_name.webm</code
           >
           <br />Just make sure to replace <code>input_file.webm</code> with the
@@ -179,6 +188,32 @@
         <p>
           Make sure you press <code>Apply Settings</code> after changing any of
           these values
+        </p>
+      </div>
+      <div class="info-container">
+        <h2>Better Deepfake Software</h2>
+        <p>
+          While Roop Unleashed can produce passable deepfakes the often low
+          quality of the fakes is an inherent issue with on-click deepfakes
+        </p>
+        <p>
+          To obtain a higher quality deepfake you should use
+          <a href="https://github.com/iperov/DeepFaceLab" target="_blank"
+            >DeepFaceLab</a
+          >
+          <br />This tool takes much longer than Roop as it involves training a
+          model on the source face and requires some input from the user
+        </p>
+        <p>
+          I cannot provide a guide on DeepFaceLab as I am not nearly experienced
+          enough to be offering advice <br /><a
+            href="https://mrdeepfakes.com/forums/threads/guide-deepfacelab-2-0-guide.3886/"
+            target="_blank"
+            >This guide</a
+          >
+          is the best way to learn to use the deepfake program
+          <br />It goes into detail on the process of deepfaking and the
+          settings involved
         </p>
       </div>
     </div>

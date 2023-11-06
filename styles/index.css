@@ -27,7 +27,7 @@
   margin-top: 50px;
 }
 
-#load-button {
+.load-button {
   display: block;
   cursor: pointer;
   background-color: rgb(233, 107, 18);

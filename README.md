@@ -1,1 +1,1 @@
-Sorry
+"I realized, as terrifying and painful as reality can be, it’s also the only place where you can find true happiness. Because reality is real." - Ready Player One
